@@ -16,6 +16,7 @@ mvn test
 
 **Contributors**
 Ekaterina Mazur  mazur.katie@gmail.com
+
 Violeta Abramova abramova.violetta@gmail.com
 
 
