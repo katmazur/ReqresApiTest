@@ -78,4 +78,20 @@ public class UserSteps extends UserHelper {
         response.then().assertThat().statusCode(404);
     }
 
+    @Given ("I have random user with e-mail and password")
+    public void iHaveRandomUserEmailPassword(){
+        request = RestAssured.given().header("Content-Type", "application/json");
+        payload = createRandomEmailPassword();
+    }
+    @Then ("I see registered user found when send GET request")
+    public void iSeeRegisteredUser(){
+        //1. get id from the response body
+        //2. send get request
+        //3. check status code
+        String responseIdCreated = response.then().extract().path("id");
+        String getUrlRegUser = baseUrl + "api/users/" + responseIdCreated;
+        response = request.when().get(getUrlRegUser);
+        response.then().assertThat().statusCode(200);
+    }
+
 }

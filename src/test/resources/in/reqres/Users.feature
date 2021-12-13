@@ -18,3 +18,9 @@ Feature: Users API Tests
     When I delete user using DELETE request
     Then I see status code 204
     And I see deleted user not found
+
+  Scenario: Register user successful
+    Given I have random user with e-mail and password
+    When I send POST request to 'api/register' endpoint
+    Then I see status code 200
+    And I see registered user found when send GET request
