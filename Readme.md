@@ -15,6 +15,9 @@ The project is testing open REST API at the following resource https://reqres.in
 mvn test
 
 **Contributors**
+
+Ekaterina Mazur  mazur.katie@gmail.com
+
 Violeta Abramova abramova.violetta@gmail.com
 
 
